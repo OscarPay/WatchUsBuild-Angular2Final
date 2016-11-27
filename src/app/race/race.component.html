@@ -1,4 +1,4 @@
-<section class="card"  [class.racing]="race.isRacing">
+<section class="card" [class.racing]="race.isRacing">
   <div class="panel-body">
     <div class="photo">
       <img [src]="race.image" [alt]="race.imageDescription">
@@ -6,7 +6,7 @@
     <table class="race-info">
       <tr>
         <td>
-          <h3>{{race.name}}</h3>
+          <h3><a [routerLink]="['/races', race.id]">{{race.name}}</a></h3>
           <p class="date">{{castDate(race.date) | date:'MMM d, y, h:mma'}}</p>
           <p class="description">{{race.about}}</p>
         </td>
